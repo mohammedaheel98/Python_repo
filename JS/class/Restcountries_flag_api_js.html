@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"meta>
+        <link href="css.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script>var httpreq = new XMLHttpRequest();
+            httpreq.open("GET","https://restcountries.eu/rest/v2/all",false);
+            httpreq.send(null);
+            var t=httpreq.responseText;
+            var obj=JSON.parse(t);
+            
+            function myfunc()
+            {   console.log("hi")
+                a = []
+                for(i=0;i<=19;i++)
+                {
+                    a[i]=document.createElement("img")
+                }
+                for(i=0;i<=19;i++)
+                {
+                    a[i].setAttribute("src",obj[i]["flag"]);
+                    a[i].setAttribute("width","100");
+                    a[i].setAttribute("height","100");
+                    a[i].setAttribute("title",obj[i]["name"]);
+                    a[i].setAttribute("alt",obj[i]["name"]);
+                    a[i].setAttribute("id",i);
+                    a[i].setAttribute("onclick","e(id)");
+                    document.getElementById(i).appendChild(a[i]);
+                    
+                }
+            }
+            
+            function e(id)
+            {
+                document.write("name: "+obj[id]["name"]);
+                document.write("<br>");
+                document.write("alpha2Code: "+obj[id]["alpha2Code"]);
+                document.write("<br>");
+                document.write("capital: "+obj[id]["capital"]);
+                document.write("<br>");
+                document.write("region: "+obj[id]["region"]);
+                document.write("<br>");
+                document.write("borders: "+obj[id]["borders"]);
+            }</script>
+            <style>
+            .boxdiv img{
+                height:110%;
+                width:110%;
+                padding: 20px 20px 20px 20px;
+            }
+            .col-lg-2{
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .row{
+                background-color:yellowgreen;
+            }</style>
+        <title>
+            COUNTRIES FLAGS...
+        </title>
+    </head>
+    <body onload="myfunc()">
+
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="boxdiv" id="0">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="1">
+                 </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="2">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="3">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="4">
+                </div>
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="boxdiv" id="5">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="6">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="7">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="8">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="boxdiv" id="9">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="boxdiv" id="10">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="boxdiv" id="11">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="boxdiv" id="12">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="boxdiv" id="13">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="boxdiv" id="14">
+            </div>
+        </div>
+
+    </div>
+</div>
+    <div class="row">
+         <div class="col-lg-2">
+            <div class="boxdiv" id="15">
+        </div>
+        </div>
+        <div class="col-lg-2">
+        <div class="boxdiv" id="16">
+        </div>
+         </div>
+        <div class="col-lg-2">
+        <div class="boxdiv" id="17">
+        </div>
+    </div>
+        <div class="col-lg-2">
+        <div class="boxdiv" id="18">
+        </div>
+    </div>
+        <div class="col-lg-2">
+        <div class="boxdiv" id="19">
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </body>
+
+
+</html>
