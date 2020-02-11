@@ -40,12 +40,7 @@ class team{
            }
        }
    }
-   get_player_score(){
-       for (var i=0;i<11;i++){
-           
-           console.log(this.players[i][i],this.players[i]["runs"],this.players[i]["ballsfaced"])
-       }
-   }
+   
    get_teamscore(){
        var totalscore = 0
         for(var i=0;i<11;i++){
@@ -59,7 +54,7 @@ class team{
 
         for(var i=0;i<11;i++)
         {
-            console.log("PlayerID"+this.players[i][i],"runs:"+this.players[i]["runs"],"Ballsfaced:"+this.players[i]["ballsfaced"],"Fours:"+this.players[i]["fours"],"Sixes:"+this.players[i]["sixes"])
+            console.log("PlayerID: "+this.players[i][i],"runs: "+this.players[i]["runs"],"Ballsfaced: "+this.players[i]["ballsfaced"],"Fours: "+this.players[i]["fours"],"Sixes: "+this.players[i]["sixes"])
         }
     }
     
